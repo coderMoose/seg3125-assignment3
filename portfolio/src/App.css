@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+.portfolio-root {
+	font-family: 'Space Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+
 .font-title {
 	color: #5b78ae;
 }

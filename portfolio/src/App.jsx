@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import design1Img from './assets/design1.png'
 import design2Img from './assets/design2.png'
 import design3Img from './assets/design3.png'
@@ -20,10 +21,10 @@ const caseStudies = [
   {
     title: 'Design 1',
     name: 'Service site',
-    description: 'For a dentist, bike repair shop, or hairdresser.',
-    status: 'Coming soon',
-    href: '#design-1',
-    image: design1Img,
+    description: 'Clean Beaks — goose & duck grooming.',
+    status: 'Open',
+    href: '/clean-beaks',
+    image: '/logo.png',
   },
   {
     title: 'Design 2',
@@ -257,7 +258,7 @@ function App() {
   }, [])
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-900">
+    <div className="portfolio-root relative min-h-screen overflow-hidden bg-slate-50 text-slate-900">
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0">
         <div
           className={`cursor-light absolute rounded-full ${light.visible ? 'cursor-light-visible' : 'cursor-light-hidden'}`}
@@ -373,9 +374,18 @@ function App() {
                   </p>
                   <h3 className="font-title mt-2 text-lg font-semibold text-slate-900">{study.name}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">{study.description}</p>
-                  <div className="mt-4 inline-flex w-fit rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200">
-                    {study.status}
-                  </div>
+                  {study.status === 'Open' ? (
+                    <Link
+                      to={study.href}
+                      className="mt-4 inline-flex w-fit rounded-full bg-sky-600 px-3 py-1 text-xs font-medium text-white ring-1 ring-sky-500 transition hover:bg-sky-700"
+                    >
+                      Open
+                    </Link>
+                  ) : (
+                    <div className="mt-4 inline-flex w-fit rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200">
+                      {study.status}
+                    </div>
+                  )}
                 </div>
               </article>
             ))}
