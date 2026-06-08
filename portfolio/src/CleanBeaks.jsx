@@ -324,7 +324,7 @@ export default function CleanBeaks() {
         <img src="/logo.png" alt="Clean Beaks logo" className="mx-auto h-14 w-14 rounded-full object-cover" />
         <p className="mt-2 font-semibold text-sky-700">Clean Beaks</p>
         <p className="mt-2">
-          123 Duck Street, Gooseville, Canada
+          123 Duck Street, Gooseville, Canada <br />
           Designed by{' '}
           <Link to="/" className="font-medium text-sky-600 underline underline-offset-2 hover:text-sky-800">
             Daniel
