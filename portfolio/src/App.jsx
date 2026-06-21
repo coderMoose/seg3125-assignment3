@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import design1Img from './assets/design1.png'
-import design2Img from './assets/design2.png'
+import speedyMemoryImage from './assets/speedymemory-logo.png'
 import design3Img from './assets/design3.png'
 import design4Img from './assets/design4.png'
 import './App.css'
@@ -21,7 +20,7 @@ const caseStudies = [
   {
     title: 'Design 1',
     name: 'Service site',
-    description: 'Clean Beaks — goose & duck grooming.',
+    description: 'Clean Beaks, goose & duck grooming.',
     status: 'Open',
     href: '/clean-beaks',
     image: '/logo.png',
@@ -29,10 +28,10 @@ const caseStudies = [
   {
     title: 'Design 2',
     name: 'Memory game',
-    description: '...',
+    description: 'Speedy Memory, a card-matching game',
     status: 'Open',
     href: '/speedy-memory',
-    image: design2Img,
+    image: speedyMemoryImage,
   },
   {
     title: 'Design 3',
