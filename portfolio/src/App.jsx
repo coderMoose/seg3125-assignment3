@@ -30,8 +30,8 @@ const caseStudies = [
     title: 'Design 2',
     name: 'Memory game',
     description: '...',
-    status: 'Coming soon',
-    href: '#design-2',
+    status: 'Open',
+    href: '/speedy-memory',
     image: design2Img,
   },
   {
